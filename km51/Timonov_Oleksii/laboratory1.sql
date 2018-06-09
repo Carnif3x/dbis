@@ -10,10 +10,12 @@
 
 create user timonov
 Identified by timonov
-Default tablespace "USERS"
-Temporary tablespace "TEMP"
+Default tablespace "USERS";
+Temporary tablespace "TEMP";
 
-Grant "Connect" to timonov
+Alter user timonov QUOTA 100m on Users;
+
+Grant "Connect" to timonov;
 Grant alter any table to timonov;
 
 
